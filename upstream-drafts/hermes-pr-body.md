@@ -1,34 +1,53 @@
 ## Summary
 
-Adds an optional integration guide for using ScopeBlind Agent Vault as a verifiable context/memory layer with Hermes.
+Adds ScopeBlind Agent Vault as an optional Hermes MCP catalog entry.
+
+This lets Hermes request signed Agent Vault context capsules before a run, propose owner-reviewed memory updates after a run, and verify the disclosed context boundary offline.
 
 Hermes remains the agent runtime. ScopeBlind Agent Vault only adds:
 
 - signed context capsules before a run;
 - explicit redactions for sealed/private pages;
-- owner-approved memory proposals after a run;
-- offline verification of what was disclosed.
-
-This is useful for users running Hermes across machines/models who want portable memory with a verifiable state trail.
+- owner-reviewed memory proposals after a run;
+- offline verification of what context was disclosed.
 
 ## Why this fits Hermes
 
-Hermes already handles execution, models, tools, skills, gateways, and long-running autonomy. Agent Vault is intentionally not another runtime. It is a trust layer around runtime-visible context.
+Hermes already handles execution, model/provider routing, tools, skills, gateways, and long-running autonomy. Agent Vault is intentionally not another runtime. It is a trust layer around runtime-visible context.
 
 Short version:
 
 > Hermes runs the agent. GBrain remembers. Agent Vault proves what changed, what was disclosed, and what can be trusted.
 
-## Example flow
+## Install behavior
 
-1. Hermes starts a task.
-2. Hermes calls `vault_context_request` over MCP.
-3. Agent Vault returns a signed Context Capsule containing only policy-disclosed pages.
-4. Hermes uses the included pages as context.
-5. Hermes calls `vault_memory_propose` with candidate durable learnings.
-6. The user approves/rejects; Hermes cannot silently mutate canonical memory.
-7. Anyone can call `vault_capsule_verify` offline.
+The catalog entry is a git-installed local stdio MCP pinned to the current ScopeBlind adapter commit:
+
+- source: https://github.com/ScopeBlind/agent-vault-mcp
+- ref: `c9ae9662aec1abcc3e98fa45a3230b486c6f3261`
+- bootstrap: `npm install --omit=dev`
+
+It ships with a demo Vault so it can run immediately. Users can point it at their own Vault by setting:
+
+```bash
+SCOPEBLIND_AGENT_MANIFEST=/path/to/agent/manifest.json
+SCOPEBLIND_AGENT_PAGES=/path/to/agent/signed-pages.json
+```
+
+## Safety defaults
+
+The default enabled tools are read/propose/verify tools:
+
+- `vault_manifest_get`
+- `vault_pages_list`
+- `vault_disclosure_policy_check`
+- `vault_context_request`
+- `vault_capsule_export`
+- `vault_capsule_verify`
+- `vault_memory_propose`
+
+`vault_page_sign` is intentionally not enabled by default because it requires an explicit owner signing secret and should only be used for owner-approved canonical writes.
 
 ## Scope
 
-This PR only adds optional docs/example config. It does not add ScopeBlind as a Hermes dependency, does not change Hermes memory behavior, and does not require a hosted ScopeBlind account.
+This PR only adds an optional MCP catalog manifest. It does not add ScopeBlind as a Hermes dependency, does not change Hermes memory behavior, and does not require a hosted ScopeBlind account.
