@@ -1,0 +1,27 @@
+{
+  "type": "scopeblind.agent_manifest.v1",
+  "agent_id": "agent:tom/research-agent",
+  "handle": "https://scopeblind.com/a/tom/research-agent",
+  "display_name": "Research Agent",
+  "passport_public_key": "57240af67d74c74cd095a00e4c942c1fb226e71d6bda815a1ba036c23be25efc",
+  "passport_kid": "did:key:scopeblind-demo-agent#vault-v1",
+  "crest_hash": "sha256:13211ecef132725823d8dd068400bd14243f0b01bb8cf2dae28e544e8d141f76",
+  "state_hash": "sha256:459f195ec88462e84ec606b774a2bc1db267113f3d171a4f92045a23742bcceb",
+  "system_prompt_hash": "sha256:9cab88a8252bcac24938e190ac059c8cd634b5171636b665889a9b7847f4612e",
+  "vault_root_hash": "sha256:459f195ec88462e84ec606b774a2bc1db267113f3d171a4f92045a23742bcceb",
+  "memory_root_hash": "sha256:2e5ddf5bf5d01d5c279e0ae7ab9632f73e216db4f53ed856d4a1a2f7656f7e61",
+  "skill_root_hash": "sha256:8d4545b0ace0a9d7df512a137b09bfd8d59384fa4cb3e13c40aad649d622f278",
+  "policy_root_hash": "sha256:a8f3592ea5710aba064b0fc4915397de83498fbe6b5c49d0963475c28d5fb966",
+  "tool_policy_hash": "sha256:c64c24071ecae674cf08ea99d900744564ea89324eb72d9c1f0fb03b7d6617e6",
+  "spend_policy_hash": "sha256:30a3ccc6082d4a5aaea4780507c65931d4c93b95471b7ba3fb3b87786041dfa2",
+  "disclosure_policy_hash": "sha256:4d66074b40b767088aec07d7a1af65166d6aca0878d9f7bf2d6f95e0eb610480",
+  "parent_manifest_hash": "sha256:7f6f16d0d9bb4c88b0f8ef62dd8a54b3bcb1dc403bb3405e3a22b2ee6f6eb51d",
+  "created_at": "2026-05-21T00:00:00.000Z",
+  "updated_at": "2026-05-21T00:00:00.000Z",
+  "signature": {
+    "alg": "Ed25519",
+    "kid": "did:key:scopeblind-demo-agent#vault-v1",
+    "public_key": "57240af67d74c74cd095a00e4c942c1fb226e71d6bda815a1ba036c23be25efc",
+    "sig": "2dd7e824eb935c8914bcdb865993e3dee68f7e0907bfc3dd38932c04ae1ebafe79853fc9c7d5584703e09d248e2ffdb246117fb702419e731a76cf41fc065904"
+  }
+}

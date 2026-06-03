@@ -1,0 +1,8 @@
+node_modules/
+npm-debug.log*
+.DS_Store
+.scopeblind/
+*.cap.json
+*.capsule.json
+*.proposal.json
+coverage/

@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "scopeblind-agent-vault": {
+      "command": "node",
+      "args": ["/absolute/path/to/ScopeBlindD2/packages/agent-vault-mcp/src/index.mjs"],
+      "env": {
+        "SCOPEBLIND_AGENT_MANIFEST": "/absolute/path/to/agent/manifest.json",
+        "SCOPEBLIND_AGENT_PAGES": "/absolute/path/to/agent/signed-pages.json",
+        "SCOPEBLIND_AGENT_VAULT_ALLOW_DEMO_AUTH": "false"
+      }
+    }
+  }
+}

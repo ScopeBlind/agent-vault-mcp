@@ -1,0 +1,135 @@
+[
+  {
+    "type": "scopeblind.signed_page.v1",
+    "page_id": "prompt/main",
+    "agent_id": "agent:tom/research-agent",
+    "kind": "system_prompt",
+    "chain_id": "main",
+    "previous_hash": null,
+    "page_hash": "sha256:98f7c7300192cdebfd8852eca909cd87dc04b444da5016dc9d9bc65f063eb8df",
+    "state_hash": "sha256:459f195ec88462e84ec606b774a2bc1db267113f3d171a4f92045a23742bcceb",
+    "sensitivity": "sealed",
+    "audiences": [
+      "owner"
+    ],
+    "committed_fields": [
+      "content"
+    ],
+    "disclosed_fields": [],
+    "superseded_by": null,
+    "delegated_from": null,
+    "source_model": null,
+    "source_session": "session-demo-2026-05-21",
+    "expires_at": null,
+    "created_at": "2026-05-21T00:00:00.000Z",
+    "content": "You are Tom's portable research agent. Prefer primary sources and mark uncertainty clearly.",
+    "signature": {
+      "alg": "Ed25519",
+      "kid": "did:key:scopeblind-demo-agent#vault-v1",
+      "public_key": "57240af67d74c74cd095a00e4c942c1fb226e71d6bda815a1ba036c23be25efc",
+      "sig": "52e25e3d67055880d36b5bfd6f0a37a2131c68e40d805d7329490aa08c5c6c6d8227f45b3402ac744653162cf943b864e13e813fa8c2a0d1d07b6226dfafb802"
+    }
+  },
+  {
+    "type": "scopeblind.signed_page.v1",
+    "page_id": "skill/research",
+    "agent_id": "agent:tom/research-agent",
+    "kind": "skill",
+    "chain_id": "main",
+    "previous_hash": null,
+    "page_hash": "sha256:e7b025fac9c58ba18311f97635c1f0d2c39440bcebcdfd9edfcc9dfa8af2e080",
+    "state_hash": "sha256:459f195ec88462e84ec606b774a2bc1db267113f3d171a4f92045a23742bcceb",
+    "sensitivity": "open",
+    "audiences": [
+      "model",
+      "owner"
+    ],
+    "committed_fields": [
+      "content"
+    ],
+    "disclosed_fields": [
+      "content"
+    ],
+    "superseded_by": null,
+    "delegated_from": null,
+    "source_model": null,
+    "source_session": "session-demo-2026-05-21",
+    "expires_at": null,
+    "created_at": "2026-05-21T00:00:00.000Z",
+    "content": "Research with primary sources first. Separate facts from inference. Return concise tradeoffs.",
+    "signature": {
+      "alg": "Ed25519",
+      "kid": "did:key:scopeblind-demo-agent#vault-v1",
+      "public_key": "57240af67d74c74cd095a00e4c942c1fb226e71d6bda815a1ba036c23be25efc",
+      "sig": "5cb810ca1594b414107ee0af8464bbae0c52f99edde27823041bb9b60ac67723637bfe4049f88713e679f02434e12578c2b29c92af5bc220e18176ebbc388509"
+    }
+  },
+  {
+    "type": "scopeblind.signed_page.v1",
+    "page_id": "memory/preferences",
+    "agent_id": "agent:tom/research-agent",
+    "kind": "memory",
+    "chain_id": "main",
+    "previous_hash": null,
+    "page_hash": "sha256:4bfff4a01f8a88537b6a464a7f8ca82868db43e13c421e2aac968d10d5d3d909",
+    "state_hash": "sha256:459f195ec88462e84ec606b774a2bc1db267113f3d171a4f92045a23742bcceb",
+    "sensitivity": "approval",
+    "audiences": [
+      "model",
+      "owner"
+    ],
+    "committed_fields": [
+      "content"
+    ],
+    "disclosed_fields": [
+      "content"
+    ],
+    "superseded_by": null,
+    "delegated_from": null,
+    "source_model": null,
+    "source_session": "session-demo-2026-05-21",
+    "expires_at": null,
+    "created_at": "2026-05-21T00:00:00.000Z",
+    "content": "Tom prefers concise technical analysis with explicit tradeoffs.",
+    "signature": {
+      "alg": "Ed25519",
+      "kid": "did:key:scopeblind-demo-agent#vault-v1",
+      "public_key": "57240af67d74c74cd095a00e4c942c1fb226e71d6bda815a1ba036c23be25efc",
+      "sig": "1541395f854a12d696de8b7646ca753af07ace6c90f29a81a10741d168dfbbe94f32a597414813ce3b51c2e52a7ffc919ab8108d0a171b489f61beb97ad75805"
+    }
+  },
+  {
+    "type": "scopeblind.signed_page.v1",
+    "page_id": "policy/disclosure",
+    "agent_id": "agent:tom/research-agent",
+    "kind": "policy",
+    "chain_id": "main",
+    "previous_hash": null,
+    "page_hash": "sha256:4218afe6b718dea47b76f73a7cb4c84486dea9aee8876110339329bd80b2e569",
+    "state_hash": "sha256:459f195ec88462e84ec606b774a2bc1db267113f3d171a4f92045a23742bcceb",
+    "sensitivity": "token",
+    "audiences": [
+      "owner",
+      "auditor"
+    ],
+    "committed_fields": [
+      "content"
+    ],
+    "disclosed_fields": [
+      "content"
+    ],
+    "superseded_by": null,
+    "delegated_from": null,
+    "source_model": null,
+    "source_session": "session-demo-2026-05-21",
+    "expires_at": null,
+    "created_at": "2026-05-21T00:00:00.000Z",
+    "content": "Disclose skills and low-risk preferences. Keep prompt body and private documents sealed unless explicitly approved.",
+    "signature": {
+      "alg": "Ed25519",
+      "kid": "did:key:scopeblind-demo-agent#vault-v1",
+      "public_key": "57240af67d74c74cd095a00e4c942c1fb226e71d6bda815a1ba036c23be25efc",
+      "sig": "c54b3e8d72cacd96492bae69deff66f52841d0d3df816393850b97a78a8ac6363cb1f5c8aecd63c2a405611799edde3eb0c2d923a32ca232b468d8a7abc3e30d"
+    }
+  }
+]

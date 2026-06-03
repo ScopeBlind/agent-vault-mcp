@@ -1,0 +1,1 @@
+Add optional ScopeBlind Agent Vault MCP integration for verifiable context capsules

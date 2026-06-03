@@ -1,0 +1,50 @@
+{
+  "name": "@scopeblind/agent-vault-mcp",
+  "version": "0.1.0",
+  "description": "MCP adapter for ScopeBlind Agent Vault: signed context capsules, memory proposals, and offline verification for Hermes/GBrain-style agents.",
+  "type": "module",
+  "license": "MIT",
+  "author": "ScopeBlind Pty Ltd",
+  "homepage": "https://scopeblind.com/agent-vault",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScopeBlind/agent-vault-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ScopeBlind/agent-vault-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "agent",
+    "memory",
+    "verification",
+    "receipts",
+    "scopeblind",
+    "hermes",
+    "gbrain",
+    "context-capsule"
+  ],
+  "bin": {
+    "scopeblind-agent-vault-mcp": "src/index.mjs"
+  },
+  "scripts": {
+    "test": "node test/smoke.mjs",
+    "check": "node --check src/index.mjs && node --check test/smoke.mjs",
+    "self-test": "node src/index.mjs --self-test"
+  },
+  "dependencies": {
+    "@noble/curves": "^2.0.1",
+    "@noble/hashes": "^2.0.1"
+  },
+  "files": [
+    "src",
+    "examples",
+    "docs",
+    "INSTALL_FOR_AGENTS.md",
+    "README.md",
+    "SECURITY.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  }
+}
